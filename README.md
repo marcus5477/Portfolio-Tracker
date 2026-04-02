@@ -1,23 +1,21 @@
-# Currency Exchange Rate Checker
+# Trading Performance Metrics
 
-A Python script that fetches real-time exchange rates from ExchangeRate-API.
+This repository contains a Python script that calculates two key performance metrics from a trade log:
 
-## Features
-- Fetches current USD exchange rates
-- Displays popular currencies
-- Clean, formatted output
-- No API key required
-- completely free
+- **Profit Factor** = total profit / total loss (ignoring signs).  
+- **Sharpe Ratio** (annualized) = mean daily P&L / standard deviation of daily P&L × sqrt(252).
 
-## Installation
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
+## Files
+- `performance.py` – script to compute metrics.
+- `Trading Journal - Trades.csv` – example trade log (your own data).
 
-## Usage
-\`\`\`bash
-python exchange_rate.py
-\`\`\`
+## How to use
+1. Install pandas: `pip install pandas`
+2. Place your CSV in the same folder as `performance.py`.  
+   The CSV must have a column named exactly `'P&L $'` (adjust if yours differs).
+3. Run: `python performance.py`
 
-## API Source
-https://api.exchangerate-api.com/v4/latest/USD
+## Example output
+q!
+:q!
+
